@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Severo Pizzas">
+  <!-- PLACEHOLDER: substitua por public/images/logo.svg (ou .png, ajustando src/config/images.ts) com o logo oficial. -->
+  <circle cx="32" cy="32" r="31" fill="#0b0b0c" stroke="#ffc928" stroke-width="2"/>
+  <path d="M32 9 L54 49 Q32 58 10 49 Z" fill="#ffc928"/>
+  <path d="M32 9 L54 49 Q32 58 10 49 Z" fill="none" stroke="#e6ad00" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M10 49 Q32 58 54 49 L52 45 Q32 53 12 45 Z" fill="#c9851b"/>
+  <circle cx="31" cy="26" r="4" fill="#e8322b"/>
+  <circle cx="24" cy="40" r="4.5" fill="#e8322b"/>
+  <circle cx="40" cy="39" r="4" fill="#e8322b"/>
+  <circle cx="35" cy="32" r="1.6" fill="#0b0b0c"/>
+  <circle cx="28" cy="34" r="1.4" fill="#0b0b0c"/>
+</svg>

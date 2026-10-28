@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    color-scheme: dark;
+    /* âncoras param abaixo do cabeçalho fixo e dos filtros fixos */
+    scroll-padding-top: 4rem;
+  }
+  body {
+    @apply bg-carvao-950 font-sans text-base text-white antialiased;
+    min-width: 320px;
+  }
+  /* Toque: sem atraso nem zoom por toque duplo, sem o realce azul padrão do celular. */
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  label {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* Feedback ao tocar: escurece sempre; encolhe levemente só se o usuário aceita animações. */
+  button:not(:disabled):active,
+  a:active,
+  .choice-card:active,
+  .check-row:active {
+    filter: brightness(0.85);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    button:not(:disabled):active,
+    a.btn-primary:active,
+    a.btn-ghost:active {
+      transform: scale(0.97);
+    }
+  }
+  :focus-visible {
+    outline: 3px solid theme('colors.severo.yellow');
+    outline-offset: 2px;
+  }
+  select optgroup {
+    @apply bg-carvao-900 text-zinc-400;
+  }
+  select option {
+    @apply bg-carvao-900 text-white;
+  }
+}
+
+@layer components {
+  /* Margens laterais que respeitam o recorte/notch do iPhone na horizontal. */
+  .safe-x {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  @media (min-width: 640px) {
+    .safe-x {
+      padding-left: max(1.5rem, env(safe-area-inset-left));
+      padding-right: max(1.5rem, env(safe-area-inset-right));
+    }
+  }
+  /* Rodapés fixos acima da barra de gestos do iPhone. */
+  .pb-safe {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+  /* Celular deitado (tela baixa): o modal ocupa a tela toda em vez de ficar centralizado com margens. */
+  @media (max-height: 500px) {
+    .dialog-modal {
+      inset: 0 !important;
+      width: auto !important;
+      max-height: none !important;
+      transform: none !important;
+      border-radius: 0 !important;
+      border-width: 0 !important;
+    }
+  }
+  .label {
+    @apply mb-2 block text-xs font-bold uppercase tracking-widest text-zinc-300;
+  }
+  .field {
+    @apply rounded-xl border border-carvao-600 bg-carvao-800 px-3 py-2.5 text-base text-white placeholder:text-zinc-500 transition focus:border-severo-yellow focus:outline-none focus-visible:outline-none focus:ring-2 focus:ring-severo-yellow/40;
+  }
+  .field[aria-invalid='true'] {
+    @apply border-severo-red ring-2 ring-severo-red/30;
+  }
+  .field-error {
+    @apply mt-1.5 text-base font-medium text-red-300;
+  }
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-severo-yellow px-6 py-3 font-extrabold uppercase tracking-wide text-carvao-950 transition hover:bg-severo-yellow-dark disabled:cursor-not-allowed disabled:bg-carvao-600 disabled:text-zinc-400;
+  }
+  .btn-ghost {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-carvao-600 px-5 py-2.5 font-semibold text-zinc-200 transition hover:border-severo-yellow hover:text-white;
+  }
+  /* Cartão de opção (radio) — a classe is-checked é aplicada via :has() */
+  .choice-card {
+    @apply relative flex min-h-11 cursor-pointer flex-col gap-0.5 rounded-xl border-2 border-carvao-600 bg-carvao-800 p-3 transition hover:border-zinc-400;
+  }
+  .choice-card:has(input:checked) {
+    @apply border-severo-yellow bg-severo-yellow/10;
+  }
+  .choice-card:has(input:focus-visible) {
+    outline: 3px solid theme('colors.severo.yellow');
+    outline-offset: 2px;
+  }
+  .check-row {
+    @apply flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border border-carvao-700 bg-carvao-800/60 px-3 py-2.5 transition hover:border-carvao-600;
+  }
+  .check-row:has(input:checked) {
+    @apply border-severo-yellow/70 bg-severo-yellow/10;
+  }
+  fieldset:disabled .check-row {
+    @apply cursor-not-allowed hover:border-carvao-700;
+  }
+  .check {
+    @apply h-5 w-5 shrink-0 cursor-pointer accent-severo-yellow;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

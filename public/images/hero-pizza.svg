@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Ilustração de pizza">
+  <!-- PLACEHOLDER: substitua por uma foto real (ex.: public/images/hero-pizza.jpg) e ajuste src/config/images.ts. -->
+  <defs>
+    <radialGradient id="cheese" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#ffe17a"/>
+      <stop offset="0.7" stop-color="#ffc928"/>
+      <stop offset="1" stop-color="#e6a100"/>
+    </radialGradient>
+    <radialGradient id="crust" cx="50%" cy="50%" r="50%">
+      <stop offset="0.86" stop-color="#d98b2b"/>
+      <stop offset="1" stop-color="#9c5a14"/>
+    </radialGradient>
+    <radialGradient id="pep" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#ff5a4f"/>
+      <stop offset="1" stop-color="#b91f19"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="200" r="190" fill="url(#crust)"/>
+  <circle cx="200" cy="200" r="160" fill="url(#cheese)"/>
+  <g fill="url(#pep)">
+    <circle cx="140" cy="130" r="24"/><circle cx="250" cy="115" r="22"/><circle cx="290" cy="210" r="25"/>
+    <circle cx="200" cy="200" r="23"/><circle cx="120" cy="230" r="22"/><circle cx="215" cy="290" r="24"/>
+    <circle cx="300" cy="295" r="16"/><circle cx="135" cy="315" r="15"/>
+  </g>
+  <g fill="#1d1d1d">
+    <circle cx="190" cy="140" r="6"/><circle cx="250" cy="250" r="6"/><circle cx="160" cy="275" r="6"/>
+    <circle cx="300" cy="150" r="5"/><circle cx="95" cy="180" r="5"/>
+  </g>
+  <g fill="#3f8f3a">
+    <ellipse cx="170" cy="185" rx="9" ry="5" transform="rotate(-30 170 185)"/>
+    <ellipse cx="255" cy="170" rx="9" ry="5" transform="rotate(25 255 170)"/>
+    <ellipse cx="185" cy="250" rx="9" ry="5" transform="rotate(60 185 250)"/>
+  </g>
+  <g stroke="#9c5a14" stroke-width="3" opacity=".35">
+    <line x1="200" y1="40" x2="200" y2="360"/><line x1="40" y1="200" x2="360" y2="200"/>
+    <line x1="87" y1="87" x2="313" y2="313"/><line x1="313" y1="87" x2="87" y2="313"/>
+  </g>
+</svg>
