@@ -14,7 +14,7 @@ export function Hero() {
           </p>
           <h1 id="hero-title" className="break-words font-display text-[3.4rem] leading-[0.9] tracking-wide min-[400px]:text-6xl sm:text-7xl lg:text-8xl">
             Bateu aquela fome?{' '}
-            <span className="block text-severo-yellow">Peça sua Severo!</span>
+            <span className="block text-severo-yellow">Peça já sua pizza!</span>
           </h1>
           <p className="mt-5 max-w-md text-lg text-zinc-300">
             Monte sua pizza inteira ou meio a meio, escolha os adicionais e envie o pedido direto pelo WhatsApp.

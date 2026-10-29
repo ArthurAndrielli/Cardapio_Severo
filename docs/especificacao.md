@@ -10,7 +10,7 @@ Sem backend, login ou pagamento online. Publicável no GitHub Pages.
 | ID | Requisito |
 |---|---|
 | RF01 | Cabeçalho fixo com logo, links Início/Cardápio/Contato e botão do carrinho com contador. |
-| RF02 | Hero com "Bateu aquela fome? Peça sua Severo!", imagem e botão "Ver cardápio". |
+| RF02 | Hero com "Bateu aquela fome? Peça já sua pizza!", imagem e botão "Ver cardápio". |
 | RF03 | Faixa: "Pedidos sujeitos ao horário de funcionamento e à confirmação pelo WhatsApp." |
 | RF04 | Cardápio com filtros Salgadas/Doces e busca por nome/ingrediente (ignora acentos e caixa). |
 | RF05 | Cards com número, nome, ingredientes, preço e botão "Montar pizza". |
